@@ -1,0 +1,139 @@
+﻿@{
+    System.Data.DataTable dtCariHareketTipi = ViewBag.CariHareketTipi;
+    System.Data.DataTable dtUyeTipi = ViewBag.UyeTipi;
+    System.Data.DataTable dtUyeler = ViewBag.Uyeler;
+} 
+<!-- Page content -->
+<div id="page-content">
+    <!-- Inbox Header -->
+    <div class="content-header">
+        <div class="header-section">
+            <h1><i class="gi gi-envelope"></i> Cari<br><small> Hesap Kayıtları</small></h1>
+        </div>
+    </div>
+    <ul class="breadcrumb breadcrumb-top">
+        <li>Sayfa</li>
+        <li>Cari Hesaplar</li>
+        <li><a href="/Cari/New">Cari Hareket Kaydı</a></li>
+    </ul>
+    <!-- END Inbox Header -->
+    <!-- Inbox Content -->
+    <div class="row">
+    
+        <style>
+            .form-group {
+                padding: 5px !important;
+            }
+        </style>
+        
+            <!-- Compose Message List -->
+          
+                <!-- Compose Message Block -->
+                <div class="block">
+                    <!-- Compose Message Title -->
+                    <div class="block-title">
+
+                        <h2>Yeni <strong> Cari Hareket Kaydı</strong></h2>
+                    </div>
+                    <!-- END Compose Message Title -->
+                    <!-- Compose Message Content -->
+                    <form action="/Cari/New" method="post" class="form-horizontal form-bordered">
+                        <div class="form-group">
+                            <label class="col-md-3 col-lg-2 control-label" for="valCariHareketTipi">Cari Hareket Tipi <span class="text-danger">*</span></label>
+                            <div class="col-md-9 col-lg-10">
+                                <select id="valCariHareketTipi" name="valCariHareketTipi" class="select-chosen" data-placeholder="Cari Hareket Tipini Seçiniz.." style="width: 250px;" required>
+                                    <option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+                                    @{for (int i = 0; i < dtCariHareketTipi.Rows.Count; i++)
+                                    {
+                                        <option value="@dtCariHareketTipi.Rows[i][0]">@dtCariHareketTipi.Rows[i]["KEY"]</option>
+                                    }}
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 col-lg-2 control-label" for="valUyeTip">Üye Tipi <span class="text-danger">*</span></label>
+                            <div class="col-md-9 col-lg-10">
+                                <select id="valUyeTip" name="valUyeTip" class="select-chosen" data-placeholder="Üye Tipini Seçiniz.." style="width: 250px;" required>
+                                    <option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+                                    @{for (int i = 0; i < dtUyeTipi.Rows.Count; i++)
+                                    {
+                                        <option value="@dtUyeTipi.Rows[i][0]">@dtUyeTipi.Rows[i]["KEY"]</option>
+                                    }}
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 col-lg-2 control-label" for="valUyeler">Kişi <span class="text-danger">*</span></label>
+                            <div class="col-md-9 col-lg-10">
+                                <select id="valUyeler" name="valUyeler" class="select-chosen" data-placeholder="Kişiyi seçiniz.." style="width: 250px;" required>
+                                    <option></option><!-- Required for data-placeholder attribute to work with Chosen plugin -->
+
+                                </select>
+
+                            </div>
+                        </div>
+
+                      
+                        <div class="form-group">
+                            <label class="col-md-3 col-lg-2 control-label" for="valMiktar">Miktar</label>
+                            <div class="col-md-9 col-lg-10">
+                                <input type="text" id="valMiktar" name="valMiktar" class="form-control form-control-borderless" placeholder="Ödeme miktarı ...">
+                            </div>
+                        </div>
+                     
+                   
+                  
+                        <div class="form-group">
+                            <label class="col-md-3 col-lg-2 control-label" for="valNot">Açıklama </label>
+                            <div class="col-md-9 col-lg-10">
+                                <textarea id="valNot" name="valNot" rows="5" class="form-control textarea-editor" placeholder="Ödeme Notlarınızı buraya yazınız .."></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group form-actions">
+                            <div class="col-md-9 col-md-offset-3 col-lg-10 col-lg-offset-2">
+                                <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-share"></i> Kaydet</button>
+                                @*<button type="button" class="btn btn-sm btn-default"><i class="fa fa-pencil"></i> Save Draft</button>*@
+                            </div>
+                        </div>
+                    </form>
+                    <!-- END Compose Message Content -->
+                </div>
+                <!-- END Compose Message Block -->
+            </div>
+            <!-- END Compose Message -->
+       
+
+    
+    <!-- END Inbox Content -->
+</div>
+<!-- END Page Content
+<script src="/Content/js/vendor/jquery-1.11.1.min.js"></script> -->
+<script type="text/javascript">
+    $(function () {
+        $("#valUyeTip").change(function () {
+                                        var selectedValue = $('#valUyeTip').val();
+                                        $.ajax({
+                                            url: '/Cari/GetUyeler',
+                                            type: 'POST',
+                                            data: { "selectedValue": selectedValue },
+                                            dataType: 'json',
+                                            success: function (response) {
+                                                var items = "";
+                                               items += "<option value=\"0\">Seçiniz..</option>";
+                                               $.each(response.Uyeler, function (i, item) {
+                                                   items += "<option value=\"" + item.ID + "\">" + item.Ad + " " + item.Soyad + "</option>";
+                                                });
+                                                $("#valUyeler").html(items);
+                                                $("#valUyeler").trigger("chosen:updated");
+                                                $("#valUyeler_chosen a.chosen-single").focus();
+                                            },
+                                            error: function (error) {
+                                            }
+
+                                        });
+            });
+     
+    });
+</script>

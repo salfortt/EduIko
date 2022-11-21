@@ -1,0 +1,80 @@
+﻿@{
+
+    System.Data.DataTable dtCariOgrenciDetay = ViewBag.dtCariOgrenciDetay;
+}       <!-- Page content -->
+<div id="page-content">
+    <!-- Datatables Header -->
+    <div class="content-header">
+        <div class="header-section">
+            <h1>
+                <i class="fa fa-table"></i>Datatables<br><small>HTML tables can become fully dynamic with cool features!</small>
+            </h1>
+        </div>
+    </div>
+    <ul class="breadcrumb breadcrumb-top">
+        <li>Tables</li>
+        <li><a href="">Datatables</a></li>
+    </ul>
+    <!-- END Datatables Header -->
+    <!-- Datatables Content -->
+    <div class="block full">
+        <div class="block-title">
+            <h2><strong>Öğrenci Ödemeleri</strong> Tablosu</h2>
+        </div>
+        <p><a href="#" target="_blank">Öğrenci Ödemeleri Tablosu</a> </p>
+
+        <div class="table-responsive">
+            <table id="example-datatable" class="table table-vcenter table-condensed table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-center">Sınıf</th>
+                        <th class="text-center"><i class="gi gi-user"></i></th>
+                        <th class="text-center">Ödeme Dönemi</th>
+                        <th>Kayıt Ücreti</th>
+                        <th>Taksit Sayısı</th>
+                        <th>Taksit Tutarı</th>
+                    
+                      
+                        <th class="text-center">Yapılan Ödeme</th>
+                 
+
+                        <th class="text-center">Dönem Bakiyesi</th>
+                        <th class="text-center">Kaçıncı Taksit</th>
+                        <th class="text-center">Kaç Taksit Geride</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < dtCariOgrenciDetay.Rows.Count; i++)
+                    {
+                        <tr>
+                            <td class="text-center">@dtCariOgrenciDetay.Rows[i]["SINIF_ADI"]</td>
+                            <td class="text-center"> @dtCariOgrenciDetay.Rows[i]["AD"] @dtCariOgrenciDetay.Rows[i]["SOYAD"]</td>
+                            <td class="text-center">@dtCariOgrenciDetay.Rows[i]["DONEM_TARIHI"]</td>
+                            <td class="text-center">@dtCariOgrenciDetay.Rows[i]["KAYIT_UCRETI"]</td>
+                            <td class="text-center">@dtCariOgrenciDetay.Rows[i]["TAKSIT_SAYISI"]</td>
+                            <td class="text-center">@dtCariOgrenciDetay.Rows[i]["AYLIK_ODEME"]</td>
+                            <td class="text-center">@dtCariOgrenciDetay.Rows[i]["YAPILAN_ODEME"]</td>  
+                         
+                            
+                          
+                           
+                            <td class="text-center">@dtCariOgrenciDetay.Rows[i]["DONEM_BAKIYESI"]</td>
+                            <td class="text-center">@(i +1). Taksit</td>
+
+                            <td class="text-center">@dtCariOgrenciDetay.Rows[i]["KAC_TAKSIT_GERIDE"]</td>
+                        </tr>
+                    }
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- END Datatables Content -->
+</div>
+<!-- END Page Content -->
+@section ScriptFooter
+   {
+    <script src="/Content/js/pages/tablesDatatables.js"></script>
+    <script>$(function () { TablesDatatables.init(); });</script>
+}
