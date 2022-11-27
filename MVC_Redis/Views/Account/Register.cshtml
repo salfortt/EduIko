@@ -1,0 +1,110 @@
+﻿@model MVC_Redis.Models.Account.Register;
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Register-section-->
+<section class="sptb">
+    <div class="container customerpage">
+        <div class="row">
+            <div class="col-lg-5 col-xl-5 col-md-6 d-block mx-auto">
+                <div class="card">
+                    <div class="card-body p-6">
+                        <div class="mb-6">
+                            <h5 class="fs-25 font-weight-semibold">Kayıt Ol</h5>
+                            <p>Lütfen Zorunlu Alanları Doldurun *</p>
+                        </div>
+                        <div class="single-page customerpage">
+                            <div class="wrapper wrapper2 box-shadow-0">
+                                @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+                                {
+                                    <form id="register" class="" tabindex="500">
+
+                                        <div class="name">
+                                            @Html.TextBoxFor(e => e.FirstName, new { @class = "form-control", placeholder = "Ad" })
+                                            @Html.ValidationMessageFor(e => e.FirstName,"",new { @style="color:red" })
+                                        </div>
+                                        <div class="name">
+                                            @Html.TextBoxFor(e => e.LastName, new { @class = "form-control", placeholder = "Soyad" })
+                                            @Html.ValidationMessageFor(e => e.LastName,"",new { @style="color:red" })
+                                        </div>
+                                        <div class="form-group">
+
+                                            @Html.TextBoxFor(e => e.PhoneNumber, new { @class = "form-control", placeholder = "Telefon Numarası" })
+                                            @Html.ValidationMessageFor(e => e.PhoneNumber,"",new { @style="color:red" })
+
+                                        </div>
+                                        <div class="passwd">
+                                            @Html.PasswordFor(e => e.Password, new { @class = "form-control", placeholder = "Şifre" })
+                                            @Html.ValidationMessageFor(e => e.Password,"",new { @style="color:red" })
+                                        </div>
+                                        <div class="passwd">
+                                            @Html.PasswordFor(e => e.RePassword, new { @class = "form-control", placeholder = "Şifre Tekrar" })
+                                            @Html.ValidationMessageFor(e => e.RePassword,"",new { @style="color:red" })
+                                        </div>
+
+                                        <div class="form-switches-stacked">
+                                            <div class="form-label">Hesap Türü</div>
+                                            <label class="form-switch">
+                                                <input type="radio" name="AccountType" value="1" class="form-switch-input" checked="">
+                                                <span class="form-switch-indicator"></span>
+                                                <span class="form-switch-description">Öğretmen</span>
+                                            </label>
+                                            <label class="form-switch">
+                                                <input type="radio" name="AccountType" value="2" class="form-switch-input">
+                                                <span class="form-switch-indicator"></span>
+                                                <span class="form-switch-description">Öğrenci</span>
+                                            </label>
+                                            <label class="form-switch">
+                                                <input type="radio" name="AccountType" value="3" class="form-switch-input">
+                                                <span class="form-switch-indicator"></span>
+                                                <span class="form-switch-description">Veli</span>
+                                            </label>
+
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="submit" value="Kayıt Ol" class="btn btn-primary" />
+                                        </div>
+
+                                    </form>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-6 border-top">
+                        <div class="d-flex">
+                            <div>
+                                <h5 class="modal-title fs-20 font-weight-semibold">Sosyal Medya ile Kayıt ol</h5>
+                                <p class="fs-16">Sosyal Medya Hesaplarından Birini Seçebilirsiniz</p>
+                                <div class="">
+                                    <div class="btn-group mb-3 mb-lg-0">
+                                        <a href="https://www.facebook.com/" class="social-button">
+                                            <span class="fe fe-facebook"></span> Facebook
+                                        </a>
+                                    </div>
+                                    <div class="btn-group mb-3 mb-lg-0">
+                                        <a href="https://www.google.com/gmail/" class="social-button">
+                                            <span class="fe fe-linkedin"></span> Linkedin
+                                        </a>
+                                    </div>
+                                    <div class="btn-group mb-3 mb-lg-0">
+                                        <a href="https://twitter.com/" class="social-button">
+                                            <span class="fe fe-twitter"></span> Twitter
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--/Register-section-->
+<!--Section-->
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

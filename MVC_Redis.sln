@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC_Redis", "MVC_Redis\MVC_Redis.csproj", "{C499E5F1-37B9-47F1-9B33-1D05D7AC1D92}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{DB75BC8C-7511-45FB-9C4B-A4207B12492E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{AB9A7D31-559E-4BC6-B11B-2A1172827380}"
@@ -13,16 +11,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{5766585F-F4AB-45F3-B15C-B5367998F884}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC_Redis", "MVC_Redis\MVC_Redis.csproj", "{F7F84BF7-1EA9-4C26-BFC0-F3480FAF24B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C499E5F1-37B9-47F1-9B33-1D05D7AC1D92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C499E5F1-37B9-47F1-9B33-1D05D7AC1D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C499E5F1-37B9-47F1-9B33-1D05D7AC1D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C499E5F1-37B9-47F1-9B33-1D05D7AC1D92}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DB75BC8C-7511-45FB-9C4B-A4207B12492E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DB75BC8C-7511-45FB-9C4B-A4207B12492E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB75BC8C-7511-45FB-9C4B-A4207B12492E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{5766585F-F4AB-45F3-B15C-B5367998F884}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5766585F-F4AB-45F3-B15C-B5367998F884}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5766585F-F4AB-45F3-B15C-B5367998F884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7F84BF7-1EA9-4C26-BFC0-F3480FAF24B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7F84BF7-1EA9-4C26-BFC0-F3480FAF24B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7F84BF7-1EA9-4C26-BFC0-F3480FAF24B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7F84BF7-1EA9-4C26-BFC0-F3480FAF24B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

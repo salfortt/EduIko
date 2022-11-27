@@ -2,11 +2,13 @@ using Microsoft.AspNetCore.Hosting.Server;
 using MVC_Redis;
 using MVC_Redis.Controllers;
 using StackExchange.Redis;
+using Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddMvc().AddRazorRuntimeCompilation();
 IConfiguration configuration = builder.Configuration;
 var options = ConfigurationOptions.Parse(configuration.GetConnectionString("Redis")); // host1:port1, host2:port2, ...
 options.Password = "istanbul343,,";
@@ -26,6 +28,8 @@ if (!app.Environment.IsDevelopment())
 app.UseStaticFiles();
 
 app.UseRouting();
+
+//app.AddAuthentication().AddFacebook().AddTwitter();
 
 app.UseAuthorization();
 
