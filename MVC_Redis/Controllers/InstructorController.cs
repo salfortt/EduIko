@@ -19,5 +19,11 @@ namespace MVC_Redis.Controllers
            
             return PartialView("_"+view);
         }
+
+        public IActionResult LoadModalPartial()
+        {
+
+            return PartialView("_AddCoursePartialView");
+        }
     }
 }

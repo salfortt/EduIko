@@ -3,6 +3,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
 <!--User Profile-->
 <section class="sptb  profile-1">
     <div class="container">
@@ -139,7 +140,16 @@
                                 <div class="tabs-menu1">
                                     <ul class="nav">
                                         <li class="ms-0"><a href="#tab-5" class="active ms-0" data-bs-toggle="tab" onclick="getPartialProfile()">Profil</a></li>
-                                        <li><a href="#partialLoad" data-bs-toggle="tab" class="" onclick="getPartialView('CourseListPartialView')">Kurs Listesi</a></li>
+                                         <li>
+                                            <a href="javascript:void(0)" data-bs-toggle="dropdown" class="dropdown-toggle">Kurs</a>
+                                            <ul class="dropdown-menu" role="menu" style="">
+                                                
+                                                <a href="#partialLoad" data-bs-toggle="tab" class="" onclick="getPartialView('CourseListPartialView')" id="courseList">Kurs Listesi</a>
+                                                <li><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#largeModal" onclick="getPartialModal()">Kurs Ekle</a></li>
+                                               
+                                            </ul>
+                                        </li>
+
                                         <li><a href="#partialLoad" data-bs-toggle="tab" class="" onclick="getPartialView('RecentCoursePartialView')">Son Kursları</a></li>
                                         <li><a href="#partialLoad" data-bs-toggle="tab" class="" onclick="getPartialView('FollowersPartialView')">Takipçiler</a></li>
                                         <li><a href="#partialLoad" data-bs-toggle="tab" class="" onclick="getPartialView('CommentsPartialView')">Yorumlar</a></li>
@@ -212,9 +222,40 @@
         </div>
     </div>
 </section>
-
+<div id="largeModal" class="modal fade">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header pd-x-20">
+                <h6 class="modal-title">Kurs Ekle</h6>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body pd-20" id="partialModalLoad">
+                
+               
+            </div><!-- modal-body -->
+            @*<div class="modal-footer">
+                <button type="button" class="btn btn-primary">Kaydet</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            </div>*@
+        </div>
+    </div><!-- modal-dialog -->
+</div><!-- modal -->
 <!--Section-->
 <script>
+
+    $('[data-bs-toggle="tab"]').click(function (e) {
+        console.log($(e.target)[0].innerText);
+        if ($(e.target)[0].innerText != "Kurs Listesi") {
+            $("#courseList").attr('class', '');
+            $('[data-bs-toggle="dropdown"]').attr('class', 'dropdown-toggle');
+       }
+       else{
+            $('[data-bs-toggle="dropdown"]').attr('class', 'dropdown-toggle show active');
+       }
+    });
+   
 
   function getPartialView(view)
   {
@@ -241,6 +282,15 @@
         
     }
 
+    function getPartialModal()
+    {
+       
+
+        $.get('@Url.Action("LoadModalPartial","Instructor")', function (data) {
+
+            $('#partialModalLoad').html(data);
+        });
+    }
 
 
 
