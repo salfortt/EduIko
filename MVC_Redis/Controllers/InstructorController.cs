@@ -14,7 +14,12 @@ namespace MVC_Redis.Controllers
             return View();
         }
 
-        public IActionResult LoadPartial(string view)
+		public IActionResult Instructor()
+		{
+			return View();
+		}
+
+		public IActionResult LoadPartial(string view)
         {
            
             return PartialView("_"+view);

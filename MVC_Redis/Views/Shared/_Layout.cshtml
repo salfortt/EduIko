@@ -135,6 +135,7 @@
                         <nav class="horizontalMenu clearfix d-md-flex">
                             <ul class="horizontalMenu-list">
                                 <li aria-haspopup="true"><a href="/Home/Index">Anasayfa </a></li>
+                                <li aria-haspopup="true"><a href="/Search/Index">Ara </a></li>
                                 <li aria-haspopup="true"><a href="#">Öğretmenler </a></li>
                                 <li aria-haspopup="true"><a href="#">Teknik Destek</a></li>
                                 <li aria-haspopup="true"><a href="#">Hakkımızda</a></li>
@@ -147,21 +148,15 @@
                 </div>
             </div><!--/Horizontal-main -->
             <!--Section-->
-            <section>
-                <div class="sptb-2 bannerimg">
-                    <div class="header-text mb-0">
-                        <div class="container">
-                            <div class="text-center text-white py-7">
-                                @*<h1 class="">Register</h1>*@
-                                <ol class="breadcrumb text-center">
-                                    @*<li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
-                                    <li class="breadcrumb-item active text-white" aria-current="page">Register</li>*@
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section><!--/Section-->
+            
+            @if (@Html.ViewContext.ActionDescriptor.RouteValues["controller"].ToString() != "Search")
+            {
+                Html.RenderPartial("_OtherBannerPartialView");
+            }
+            else
+            {
+                Html.RenderPartial("_SearchBannerPartialView");
+            }
         </div>
     </div>
 
