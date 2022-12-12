@@ -85,9 +85,11 @@ function admission() {
         color: '#a7b4c9'
       }
     },
+
     series: chartdata,
     color:[ myVarVal, '#ef5050 ',],
-	barMaxWidth: 10
+	barMaxWidth: 10,
+
 	
   };
 
@@ -101,17 +103,20 @@ function admission() {
 
 
 var options = {
-  series: [25, 25,15,20,15],
+  series: [25, 25,50],
   chart: {
     height:320,
-    type: 'donut',
+      type: 'donut'
+      
+     
   },
   dataLabels: {
     enabled: false
   },
   legend: {
     show: true,
-    position:'bottom',
+      position: 'bottom',
+      fontFamily: 'Helvetica, Arial',
     margin:{
       top:50,
     }
@@ -133,21 +138,26 @@ var options = {
           show: true,
           fontSize: '29px',
           color:'#6c6f9a',
-          offsetY: -10
+            offsetY: -10,
+            formatter: function (val) {
+                console.log(val);
+                return val+"$"
+            }
         },
         value: {
           show: true,
           fontSize: '26px',
           color: undefined,
           offsetY: 16,
-          formatter: function (val) {
+            formatter: function (val) {
+                console.log(val);
             return val + "%"
           }
         },
         total: {
           show: true,
           showAlways: false,
-          label: 'Total',
+          label: 'Toplam',
           fontSize: '22px',
           fontWeight: 600,
           color: '#373d3f',
@@ -164,8 +174,8 @@ var options = {
       }
     }
   }],
-  labels: ["IE","Chrome" ,"Opera" ,"Firefox" ,"Edge"],
-  colors: ['#02c3ee', '#6964f7' ,'#ffe15b', '#ff1a1a', '#21c44c'],
+  labels: ["Tamamlanan","Yarým Kalan" ,"Satýn Alýnan"],
+  colors: ['#02c3ee', '#6964f7' ,'#ffe15b'],
 };
 var chart = new ApexCharts(document.querySelector("#browser"), options);
 chart.render();
@@ -175,7 +185,7 @@ function browser() {
 }
 
 
-$('.data-table-example').DataTable();
+
 
 
 

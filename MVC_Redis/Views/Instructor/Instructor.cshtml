@@ -71,7 +71,8 @@
 								<ul class="nav">
 									<li class=""><a href="#tab-5" class="active" data-bs-toggle="tab">Profil</a></li>
 									@*<li class=""><a href="#tab-6" class="" data-bs-toggle="tab">Edit Profile</a></li>*@
-									<li><a href="#tab-7" data-bs-toggle="tab" class="">Kurs Bilgileri</a></li>
+									<li><a href="#tab-7" data-bs-toggle="tab" class="" onclick="getPartialView('CourseListPartialView')">Kurslar</a></li>
+									@*<li><a href="#tab-7" data-bs-toggle="tab" class="">Kurslar</a></li>*@
 									<li><a href="#tab-8" data-bs-toggle="tab" class="">Takipçiler</a></li>
 									<li><a href="#tab-9" data-bs-toggle="tab" class="">Yorumlar</a></li>
 								</ul>
@@ -283,115 +284,7 @@
 								</div>
 							</div>
 							<div class="tab-pane userprof-tab" id="tab-7">
-								<div class="card mb-0 border-0 shadow-none">
-									<div class="card-body">
-										<h3 class="card-title pt-3 pb-3">List Of Courses Taught By: Jacob Smith</h3>
-										<div class="">
-											<div class="row">
-												<div class="col-xl-12 col-md-12">
-													<div class="table-responsive">
-														<table id="example" class="table text-nowrap table-bordered br-7 border-top mb-0">
-															<thead>
-															<th>Id</th>
-															<th>Course Name</th>
-															<th>Course Type</th>
-															<th>Duration</th>
-															<th>Start Date</th>
-															<th>Status</th>
-															</thead>
-															<tbody>
-																<tr>
-																	<td>1</td>
-																	<td>Webdesigning Courses</td>
-																	<td><span class="btn btn-success btn-sm">Online</span></td>
-																	<td>2 Months</td>
-																	<td>15-3-2021</td>
-																	<td class="text-center">
-																		<a href="userprofile.html" class="btn btn-outline-primary btn-md me-1" data-bs-toggle="tooltip" data-bs-original-title="View"><i class="fe fe-eye"></i></a>
-																		<a href="edit-posts.html" class="btn btn-outline-success btn-md me-1" data-bs-toggle="tooltip" data-bs-original-title="Edit"><i class="fe fe-edit"></i></a>
-																		<a href="javascript:void(0)" class="btn btn-outline-danger btn-md" data-bs-toggle="tooltip" data-bs-original-title="Delete"><i class="fe fe-trash"></i></a>
-																	</td>
-																</tr>
-																<tr>
-																	<td>2</td>
-																	<td>Multimedia Courses</td>
-																	<td><span class="btn btn-success btn-sm">Online</span></td>
-																	<td>6 Months</td>
-																	<td>22-3-2021</td>
-																	<td class="text-center">
-																		<a href="userprofile.html" class="btn btn-outline-primary btn-md me-1" data-bs-toggle="tooltip" data-bs-original-title="View"><i class="fe fe-eye"></i></a>
-																		<a href="edit-posts.html" class="btn btn-outline-success btn-md me-1" data-bs-toggle="tooltip" data-bs-original-title="Edit"><i class="fe fe-edit"></i></a>
-																		<a href="javascript:void(0)" class="btn btn-outline-danger btn-md" data-bs-toggle="tooltip" data-bs-original-title="Delete"><i class="fe fe-trash"></i></a>
-																	</td>
-																</tr>
-																<tr>
-																	<td>3</td>
-																	<td>Business Management Courses</td>
-																	<td><span class="btn btn-danger btn-sm">Offline</span></td>
-																	<td>5 Months</td>
-																	<td>25-2-2021</td>
-																	<td class="text-center">
-																		<a href="userprofile.html" class="btn btn-outline-primary btn-md me-1" data-bs-toggle="tooltip" data-bs-original-title="View"><i class="fe fe-eye"></i></a>
-																		<a href="edit-posts.html" class="btn btn-outline-success btn-md me-1" data-bs-toggle="tooltip" data-bs-original-title="Edit"><i class="fe fe-edit"></i></a>
-																		<a href="javascript:void(0)" class="btn btn-outline-danger btn-md" data-bs-toggle="tooltip" data-bs-original-title="Delete"><i class="fe fe-trash"></i></a>
-																	</td>
-																</tr>
-																<tr>
-																	<td>4</td>
-																	<td>Software Development Courses</td>
-																	<td><span class="btn btn-danger btn-sm">Offline</span></td>
-																	<td>4 months</td>
-																	<td>29-1-2021</td>
-																	<td class="text-center">
-																		<a href="userprofile.html" class="btn btn-outline-primary btn-md me-1" data-bs-toggle="tooltip" data-bs-original-title="View"><i class="fe fe-eye"></i></a>
-																		<a href="edit-posts.html" class="btn btn-outline-success btn-md me-1" data-bs-toggle="tooltip" data-bs-original-title="Edit"><i class="fe fe-edit"></i></a>
-																		<a href="javascript:void(0)" class="btn btn-outline-danger btn-md" data-bs-toggle="tooltip" data-bs-original-title="Delete"><i class="fe fe-trash"></i></a>
-																	</td>
-																</tr>
-																<tr>
-																	<td>5</td>
-																	<td>App Development Courses</td>
-																	<td><span class="btn btn-success btn-sm">Online</span></td>
-																	<td>2 months</td>
-																	<td>12-2-2021</td>
-																	<td class="text-center">
-																		<a href="userprofile.html" class="btn btn-outline-primary btn-md me-1" data-bs-toggle="tooltip" data-bs-original-title="View"><i class="fe fe-eye"></i></a>
-																		<a href="edit-posts.html" class="btn btn-outline-success btn-md me-1" data-bs-toggle="tooltip" data-bs-original-title="Edit"><i class="fe fe-edit"></i></a>
-																		<a href="javascript:void(0)" class="btn btn-outline-danger btn-md" data-bs-toggle="tooltip" data-bs-original-title="Delete"><i class="fe fe-trash"></i></a>
-																	</td>
-																</tr>
-																<tr>
-																	<td>6</td>
-																	<td>Photoshop Courses</td>
-																	<td><span class="btn btn-danger btn-sm">Offline</span></td>
-																	<td>5 months</td>
-																	<td>15-3-2021</td>
-																	<td class="text-center">
-																		<a href="userprofile.html" class="btn btn-outline-primary btn-md me-1" data-bs-toggle="tooltip" data-bs-original-title="View"><i class="fe fe-eye"></i></a>
-																		<a href="edit-posts.html" class="btn btn-outline-success btn-md me-1" data-bs-toggle="tooltip" data-bs-original-title="Edit"><i class="fe fe-edit"></i></a>
-																		<a href="javascript:void(0)" class="btn btn-outline-danger btn-md" data-bs-toggle="tooltip" data-bs-original-title="Delete"><i class="fe fe-trash"></i></a>
-																	</td>
-																</tr>
-																<tr>
-																	<td>7</td>
-																	<td>Web Development Course</td>
-																	<td><span class="btn btn-success btn-sm">Online</span></td>
-																	<td> 1 month</td>
-																	<td>1-4-2021</td>
-																	<td class="text-center">
-																		<a href="userprofile.html" class="btn btn-outline-primary btn-md me-1" data-bs-toggle="tooltip" data-bs-original-title="View"><i class="fe fe-eye"></i></a>
-																		<a href="edit-posts.html" class="btn btn-outline-success btn-md me-1" data-bs-toggle="tooltip" data-bs-original-title="Edit"><i class="fe fe-edit"></i></a>
-																		<a href="javascript:void(0)" class="btn btn-outline-danger btn-md" data-bs-toggle="tooltip" data-bs-original-title="Delete"><i class="fe fe-trash"></i></a>
-																	</td>
-																</tr>
-															</tbody>
-														</table>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+								
 							</div>
 							<div class="tab-pane" id="tab-8">
 								<div class="card mb-0 border-0 shadow-none">
@@ -1052,3 +945,22 @@
 </section>
 <!--/Section-->
 
+<script>
+
+
+
+
+	 function getPartialView(view)
+  {
+      var link='@Url.Action("LoadPartial","Instructor")';
+      
+        $.get(link + "?view=" + view, function (data) {
+
+			$('#tab-7').html(data);
+        });
+      
+  }
+
+
+
+</script>

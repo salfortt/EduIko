@@ -3,6 +3,8 @@ using MVC_Redis;
 using MVC_Redis.Controllers;
 using StackExchange.Redis;
 using Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation;
+using MVC_Redis.Models.Account;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +20,10 @@ var multiplexer = ConnectionMultiplexer.Connect(options);
 builder.Services.AddSingleton<IConnectionMultiplexer>(multiplexer);
 builder.Services.AddSingleton<ICacheService, RedisCacheService>();
 builder.Services.AddSingleton<ICategoryService, CategoryService>();
+
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

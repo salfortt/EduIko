@@ -1,0 +1,582 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Section-->
+<section class="sptb">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-8 col-lg-8 col-md-12">
+				<div class="border-0 mb-5 course-details">
+					<div class="wideget-user-tab wideget-user-tab3">
+						<div class="tab-menu-heading">
+							<div class="tabs-menu1">
+								<ul class="nav">
+									<li class="ms-md-0"><a href="#tab-1" class="active ms-0" data-bs-toggle="tab">Genel</a></li>
+									<li><a href="#partialLoad" data-bs-toggle="tab" class="" onclick="getPartialView('CurriculumPartialView')">İçerik</a></li>
+									<li><a href="#partialLoad" data-bs-toggle="tab" class="" onclick="getPartialView('InstructorPartialView')">Eğitmen</a></li>
+									<li><a href="#partialLoad" data-bs-toggle="tab" class="" onclick="getPartialView('RatingsPartialView')">Değerlendirme</a></li>
+									<li><a href="#partialLoad" data-bs-toggle="tab" class="" onclick="getPartialView('ReviewsPartialView')">Yorumlar</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="tab-content border-0 p-5 bg-white details-tab-content">
+						<div class="tab-pane active" id="tab-1">
+							<h3 class="card-title mb-3 font-weight-bold">What Will I Learn?</h3>
+							<ul class="list-group mb-5 description">
+								<li class="mb-0"><p><i class="fa fa-caret-right me-1 text-primary" aria-hidden="true"></i>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, sit amet, consectetur, adipisci velit, adipisci velit, sed quia non numquam.</p></li>
+								<li class="mb-0"><p><i class="fa fa-caret-right me-1 text-primary" aria-hidden="true"></i> Cras justo odio morbi leo risus Dapibus ac facilisis in porta ac consectetur ac vestibulum at eros.</p></li>
+								<li class="mb-0"><p><i class="fa fa-caret-right me-1 text-primary" aria-hidden="true"></i> Sed quia non numquam eius modi tempora incidunt ut labore et nostrud exercitation ullamco laboris commodo consequat. </p></li>
+								<li class="mb-0"><p class="mb-0"><i class="fa fa-caret-right me-1 text-primary" aria-hidden="true"></i> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p></li>
+							</ul>
+							<h3 class="card-title mb-3 font-weight-bold">Description</h3>
+							<div class="mb-0 description">
+								<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atcorrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+								<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoraliz the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble thena bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.</p>
+							</div>
+							<h4 class="card-title mb-3 font-weight-bold">Specifications</h4>
+							<div class="row">
+								<div class="col-xl-6 col-md-12">
+									<ul class="list-unstyled widget-spec-1">
+										<li class="text-default-dark"><i class="text-default fe fe-star"></i><span>Free Demo</span></li>
+										<li class="text-default-dark"><i class="text-default fe fe-user"></i><span>100% job Assistance</span></li>
+										<li class="text-default-dark"><i class="text-default fe fe-alert-circle"></i><span> Flexible Timing</span></li>
+										<li class="text-default-dark"><i class="text-default fe fe-file"></i><span>  Realtime Project Work</span></li>
+										<li class="text-default-dark"><i class="text-default fe fe-users"></i><span> Learn From Experts</span></li>
+										<li class="text-default-dark mb-2 mb-md-0"><i class="text-default fe fe-award"></i><span> Get Certified</span></li>
+									</ul>
+								</div>
+								<div class="col-xl-6 col-md-12">
+									<ul class="list-unstyled widget-spec-1">
+										<li class="text-default-dark"><i class="text-default fe fe-heart"></i><span> Place your career</span></li>
+										<li class="text-default-dark"><i class="text-default fe fe-dollar-sign"></i><span> Reasonable fees</span></li>
+										<li class="text-default-dark"><i class="text-default fe fe-airplay"></i><span> Access on mobile and Tv</span></li>
+										<li class="text-default-dark"><i class="text-default fe fe-monitor"></i><span> High-quality content and Class videos</span></li>
+										<li class="text-default-dark"><i class="text-default fe fe-aperture"></i><span>Learning Management System</span></li>
+										<li class="text-default-dark"><i class="text-default fe fe-credit-card"></i><span> Full lifetime access</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane " id="partialLoad">
+						
+						</div>
+						
+					
+					</div>
+					<div class="card-footer bg-white br-bs-7 br-be-7">
+						<div class="btn-list">
+							<a href="javascript:void(0)" class="btn btn-primary"><i class="fe fe-credit-card me-1"></i>Kursu Satın Al</a>
+							<a href="javascript:void(0)" class="btn btn-secondary icons"><i class="fe fe-share-2 me-1"></i> Paylaş</a>
+							<a href="javascript:void(0)" class="btn btn-info icons" data-bs-toggle="modal" data-bs-target="#report"><i class="icon icon-exclamation me-1"></i> Bize Bildir</a>
+							<a href="javascript:void(0)" class="btn btn-success icons"><i class="icon icon-heart  me-1"></i> 678</a>
+							<a href="javascript:void(0)" class="btn btn-warning icons"><i class="icon icon-printer  me-1"></i> Yazdır</a>
+						</div>
+					</div>
+				</div>
+				<h3 class="mb-5 mt-4">İlgili Kurslar</h3>
+				<!--Related Posts-->
+				<div id="myCarousel5" class="profile-carousel owl-carousel owl-carousel-icons3">
+					<!-- Wrapper for carousel items -->
+					<div class="item">
+						<div class="card overflow-hidden">
+							<div class="item-card9-img">
+								<div class="item-card9-imgs">
+									<a href="page-details.html"></a>
+									<img src="../assets/images/media/11.jpg" alt="img" class="cover-image">
+								</div>
+								<div class="item-card9-icons">
+									<a href="javascript:void(0)" class="item-card9-icons1 bg-primary"> <i class="fa fa fa-heart-o"></i></a>
+									<a href="javascript:void(0)" class="item-card9-icons1 bg-secondary"> <i class="fa fa fa-share-alt"></i></a>
+								</div>
+								<div class="item-overly-trans">
+									<a href="page-details.html" class="bg-primary">Popular</a>
+								</div>
+							</div>
+							<div class="card-body">
+								<div class="item-card9">
+									<a href="page-details.html" class="text-dark mt-2"><h3 class="font-weight-semibold mt-2 mb-2">Business Management</h3></a>
+									<p class="mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
+								</div>
+								<div class="mt-2 mb-2">
+									<div class="rating-stars d-flex me-5">
+										<h4 class="font-weight-semibold me-2">4.2</h4>
+										<div class="star-ratings start-ratings-main clearfix me-3">
+											<div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
+												<div class="br-wrapper br-theme-fontawesome-stars">
+													<select class="example-fontawesome" name="rating" autocomplete="off" style="display: none;">
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4" selected="">4</option>
+														<option value="5">5</option>
+													</select>
+												</div>
+											</div>
+										</div>(4,24,525)
+									</div>
+								</div>
+								<h4 class="font-weight-semibold fs-20 text-dark"><i class="fe fe-tag mt-0 fs-18 me-2"></i>$263.99</h4>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="card overflow-hidden">
+							<div class="ribbon ribbon-top-left text-danger"><span class="bg-danger">Offer</span></div>
+							<div class="item-card9-img">
+								<div class="item-card9-imgs">
+									<a href="page-details.html"></a>
+									<img src="../assets/images/media/9.jpg" alt="img" class="cover-image">
+								</div>
+								<div class="item-card9-icons">
+									<a href="javascript:void(0)" class="item-card9-icons1 bg-primary"> <i class="fa fa fa-heart-o"></i></a>
+									<a href="javascript:void(0)" class="item-card9-icons1 bg-secondary"> <i class="fa fa fa-share-alt"></i></a>
+								</div>
+								<div class="item-overly-trans">
+									<a href="page-details.html" class="bg-primary">High Rated</a>
+								</div>
+							</div>
+							<div class="card-body">
+								<div class="item-card9">
+									<a href="page-details.html" class="text-dark"><h3 class="font-weight-semibold mt-2 mb-2">Networking Classes</h3></a>
+									<p class="mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
+								</div>
+								<div class="mt-2 mb-2">
+									<div class="rating-stars d-flex me-5">
+										<h4 class="font-weight-semibold me-2">5.0</h4>
+										<div class="star-ratings start-ratings-main clearfix me-3">
+											<div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
+												<div class="br-wrapper br-theme-fontawesome-stars">
+													<select class="example-fontawesome" name="rating" autocomplete="off" style="display: none;">
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5" selected="">5</option>
+													</select>
+												</div>
+											</div>
+										</div>(12,00,525)
+									</div>
+								</div>
+								<h4 class="font-weight-semibold fs-20 text-dark"><i class="fe fe-tag mt-0 fs-18 me-2"></i>$745.00<span class="strike-text mx-2 text-default fs-16">$896.00</span></h4>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="card overflow-hidden">
+							<div class="ribbon ribbon-top-left text-primary"><span class="bg-danger">Offer</span></div>
+							<div class="item-card9-img">
+								<div class="item-card9-imgs">
+									<a href="page-details.html"></a>
+									<img src="../assets/images/media/3.jpg" alt="img" class="cover-image">
+								</div>
+								<div class="item-card9-icons">
+									<a href="javascript:void(0)" class="item-card9-icons1 bg-primary"> <i class="fa fa fa-heart-o"></i></a>
+									<a href="javascript:void(0)" class="item-card9-icons1 bg-secondary"> <i class="fa fa fa-share-alt"></i></a>
+								</div>
+								<div class="item-overly-trans">
+									<a href="page-details.html" class="bg-blue">Popular</a>
+								</div>
+							</div>
+							<div class="card-body">
+								<div class="item-card9">
+									<a href="page-details.html" class="text-dark mt-2"><h3 class="font-weight-semibold mt-2 mb-2">Beautician Classes</h3></a>
+									<p class="mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
+								</div>
+								<div class="mt-2 mb-2">
+									<div class="rating-stars d-flex me-5">
+										<h4 class="font-weight-semibold me-2">4.3</h4>
+										<div class="star-ratings start-ratings-main clearfix me-3">
+											<div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
+												<div class="br-wrapper br-theme-fontawesome-stars">
+													<select class="example-fontawesome" name="rating" autocomplete="off" style="display: none;">
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4" selected="">4</option>
+														<option value="5">5</option>
+													</select>
+												</div>
+											</div>
+										</div>(67,525)
+									</div>
+								</div>
+								<h4 class="font-weight-semibold fs-20 text-dark"><i class="fe fe-tag mt-0 fs-18 me-2"></i>$149.00<span class="strike-text mx-2 text-default fs-16">$296.00</span></h4>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="card overflow-hidden">
+							<div class="item-card9-img">
+								<div class="item-card9-imgs">
+									<a href="page-details.html"></a>
+									<img src="../assets/images/media/5.jpg" alt="img" class="cover-image">
+								</div>
+								<div class="item-card9-icons">
+									<a href="javascript:void(0)" class="item-card9-icons1 bg-primary"> <i class="fa fa fa-heart-o"></i></a>
+									<a href="javascript:void(0)" class="item-card9-icons1 bg-secondary"> <i class="fa fa fa-share-alt"></i></a>
+								</div>
+							</div>
+							<div class="card-body">
+								<div class="item-card2">
+									<div class="item-card2-desc">
+										<a href="page-details.html" class="text-dark mt-2"><h3 class="font-weight-semibold mt-2 mb-2">Guitar Classes</h3></a>
+										<p class="mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
+									</div>
+								</div>
+								<div class="mt-2 mb-2">
+									<div class="rating-stars d-flex me-5">
+										<h4 class="font-weight-semibold me-2">4.9</h4>
+										<div class="star-ratings start-ratings-main clearfix me-3">
+											<div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
+												<div class="br-wrapper br-theme-fontawesome-stars">
+													<select class="example-fontawesome" name="rating" autocomplete="off" style="display: none;">
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4" selected="">4</option>
+														<option value="5">5</option>
+													</select>
+												</div>
+											</div>
+										</div>(99,525)
+									</div>
+								</div>
+								<h4 class="font-weight-semibold fs-20 text-dark"><i class="fe fe-tag mt-0 fs-18 me-2"></i>$13.00</h4>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="card overflow-hidden">
+							<div class="item-card9-img">
+								<div class="item-card9-imgs">
+									<a href="page-details.html"></a>
+									<img src="../assets/images/media/16.jpg" alt="img" class="cover-image">
+								</div>
+								<div class="item-card9-icons">
+									<a href="javascript:void(0)" class="item-card9-icons1 bg-primary"> <i class="fa fa fa-heart-o"></i></a>
+									<a href="javascript:void(0)" class="item-card9-icons1 bg-secondary"> <i class="fa fa fa-share-alt"></i></a>
+								</div>
+								<div class="item-overly-trans">
+									<a href="page-details.html" class="bg-blue">Popular</a>
+								</div>
+							</div>
+							<div class="card-body">
+								<div class="item-card2">
+									<div class="item-card2-desc">
+										<a href="page-details.html" class="text-dark mt-2"><h3 class="font-weight-semibold mt-2 mb-2">PhotoShop Design</h3></a>
+										<p class="mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
+									</div>
+								</div>
+								<div class="mt-2 mb-2">
+									<div class="rating-stars d-flex me-5">
+										<h4 class="font-weight-semibold me-2">5.0</h4>
+										<div class="star-ratings start-ratings-main clearfix me-3">
+											<div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
+												<div class="br-wrapper br-theme-fontawesome-stars">
+													<select class="example-fontawesome" name="rating" autocomplete="off" style="display: none;">
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5" selected="">5</option>
+													</select>
+												</div>
+											</div>
+										</div>(99,525)
+									</div>
+								</div>
+								<h4 class="font-weight-semibold fs-20 text-dark"><i class="fe fe-tag mt-0 fs-18 me-2"></i>42.00</h4>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="card overflow-hidden">
+							<div class="item-card9-img">
+								<div class="item-card9-imgs">
+									<a href="page-details.html"></a>
+									<img src="../assets/images/media/7.jpg" alt="img" class="cover-image">
+								</div>
+								<div class="item-card9-icons">
+									<a href="javascript:void(0)" class="item-card9-icons1 bg-primary"> <i class="fa fa fa-heart-o"></i></a>
+									<a href="javascript:void(0)" class="item-card9-icons1 bg-secondary"> <i class="fa fa fa-share-alt"></i></a>
+								</div>
+								<div class="item-overly-trans">
+									<a href="page-details.html" class="bg-primary">Best Sales</a>
+								</div>
+							</div>
+							<div class="card-body">
+								<div class="item-card2">
+									<div class="item-card2-desc">
+										<a href="page-details.html" class="text-dark mt-2"><h3 class="font-weight-semibold mt-2 mb-2">Data Science</h3></a>
+										<p class="mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
+									</div>
+								</div>
+								<div class="mt-2 mb-2">
+									<div class="rating-stars d-flex me-5">
+										<h4 class="font-weight-semibold me-2">5.0</h4>
+										<div class="star-ratings start-ratings-main clearfix me-3">
+											<div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
+												<div class="br-wrapper br-theme-fontawesome-stars">
+													<select class="example-fontawesome" name="rating" autocomplete="off" style="display: none;">
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5" selected="">5</option>
+													</select>
+												</div>
+											</div>
+										</div>(1,25,252)
+									</div>
+								</div>
+								<h4 class="font-weight-semibold fs-20 text-dark"><i class="fe fe-tag mt-0 fs-18 me-2"></i>$263.99</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/Related Posts-->
+			</div>
+
+			<!--Right Side Content-->
+			<div class="col-xl-4 col-lg-4 col-md-12 mt-lg-n23">
+				<div class="card">
+					<div class="card-body">
+						<div class="product-slider">
+							<ul class="list-unstyled video-list-thumbs">
+								<li class="mb-0">
+									<a data-bs-toggle="modal" data-bs-target="#homeVideo" class="class-video p-0">
+										<img src="../assets/images/media/0-13.jpg" alt="img" class="img-responsive  border br-7">
+										<span class="video-icon" href="javascript:void(0)"><i class="fe fe-play"></i></span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="mt-4 mb-4 text-center">
+							<div class="mb-2">
+								<span class="font-weight-semibold h2 text-default-dark mb-0">
+									$135
+									<span class="ms-1 font-weight-normal fs-16 strike-text text-default">$155</span>
+								</span>
+							</div>
+							<span class="d-block">
+								<p class="mb-0">
+									<span class="fs-14 ">
+										<i class="fa fa-star text-yellow me-0"></i>
+										<i class="fa fa-star text-yellow me-0"></i>
+										<i class="fa fa-star text-yellow me-0"></i>
+										<i class="fa fa-star text-yellow me-0"></i>
+										<i class="fa fa-star-o text-yellow me-2"></i>
+										<a href="javascript:void(0)" class="icons h4 font-weight-semibold text-dark"><span class=""> 4.0</span></a>
+									</span>
+								</p>
+							</span>
+							<p class="text-success font-weight-semibold mb-0 mt-1"><i class="fe fe-clock me-1"></i>5 gün kaldı</p>
+						</div>
+						<div class="">
+							<a href="javascript:void(0)" class="btn btn-block btn-primary mb-3 mb-xl-0"><span>Sepete Ekle</span><i class="fe fe-shopping-cart mt-1 ms-2 fs-14"></i></a>
+							<a href="javascript:void(0)" class="btn btn-block btn-secondary mb-3 mb-xl-0"><span>Şimdi Satın Al</span> <i class="fe fe-arrow-right mt-1 ms-2 fs-14"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header">
+						<h3 class="card-title">Kurs Bilgileri</h3>
+					</div>
+					<div class="card-body ">
+						<table>
+							<tbody>
+								<tr>
+									<td><span class="fs-14 font-weight-bold text-default-dark">Başlangıç Tarihi</span></td>
+									<td class="w-30 text-center"><span class="">:</span></td>
+									<td><span class="fs-14 font-weight-normal">14-nisan-2021</span></td>
+								</tr>
+								<tr>
+									<td><span class="fs-14 font-weight-bold text-default-dark">Bitiş Tarihi</span></td>
+									<td class="w-30 text-center"><span class="">:</span></td>
+									<td><span class="fs-14 font-weight-normal">30-mayıs-2021</span></td>
+								</tr>
+								<tr>
+									<td><span class="fs-14 font-weight-bold text-default-dark">Seviyesi</span></td>
+									<td class="w-30 text-center"><span class="">:</span></td>
+									<td><span class="fs-14 font-weight-normal">Gelişmiş</span></td>
+								</tr>
+								<tr>
+									<td><span class="fs-14 font-weight-bold text-default-dark">Toplam Saat</span></td>
+									<td class="w-30 text-center"><span class="">:</span></td>
+									<td><span class="fs-14 font-weight-normal">30 Saat</span></td>
+								</tr>
+								<tr>
+									<td><span class="fs-14 font-weight-bold text-default-dark">Zaman</span></td>
+									<td class="w-30 text-center"><span class="">:</span></td>
+									<td><span class="fs-14 font-weight-normal">11:00</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header">
+						<h3 class="card-title">Anahtar Kelimeler</h3>
+					</div>
+					<div class="card-body product-filter-desc">
+						<div class="product-tags clearfix">
+							<ul class="list-unstyled mb-0">
+								<li><a href="javascript:void(0)">Study</a></li>
+								<li><a href="javascript:void(0)">Online-classes </a></li>
+								<li><a href="javascript:void(0)"> Education</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header">
+						<h3 class="card-title">Kurs Ara</h3>
+					</div>
+					<div class="card-body">
+						<div class="form-group">
+							<input type="text" class="form-control" id="search-text" placeholder="Ne arıyorsun?">
+						</div>
+						<div class="form-group">
+							<select name="country" id="select-countries" class="form-control form-select select2-show-search">
+								<option value="1" selected>Tüm Kategoriler</option>
+								<option value="2">Web Security</option>
+								<option value="3">Unix</option>
+								<option value="4">Business</option>
+								<option value="5">.Net</option>
+								<option value="6">Data Science</option>
+								<option value="7">Salesforce</option>
+								<option value="8">Education</option>
+								<option value="9">Electronics</option>
+								<option value="10">Digital Marketing</option>
+								<option value="11">Computer</option>
+								<option value="12">Mobile Computing</option>
+								<option value="13">Coding</option>
+								<option value="14">Python</option>
+								<option value="15">Security Hacking</option>
+							</select>
+						</div>
+						<div>
+							<a href="javascript:void(0)" class="btn  btn-primary">Search</a>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header">
+						<h3 class="card-title">Trend Eğitmenler</h3>
+					</div>
+					<div class="card-body p-0">
+						<ul class="vertical-scroll" style="overflow-y: hidden; height: 232px;">
+							<li class="item2">
+								<div class="d-flex mt-0 mb-0">
+									<div class="d-flex footerimg-l mb-0">
+										<img src="../assets/images/users/male/18.jpg" alt="image" class="avatar avatar-lg brround  me-2">
+										<div class="my-auto">
+											<a href="javascript:void(0)" class="text-dark font-weight-bold fs-16">Dewitt Hennessey</a>
+											<p class="text-muted mb-0">3D Animation</p>
+										</div>
+									</div>
+									<div class="mt-2 footerimg-r ms-auto">
+										<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Likes"><span class="badge bg-primary-light text-primary"><i class="fe fe-heart"></i> 36</span></a>
+									</div>
+								</div>
+							</li>
+							<li class="item2">
+								<div class="d-flex mt-0 mb-0">
+									<div class="d-flex footerimg-l mb-0">
+										<img src="../assets/images/users/male/8.jpg" alt="image" class="avatar avatar-lg brround  me-2">
+										<div class="my-auto">
+											<a href="javascript:void(0)" class="text-dark font-weight-bold fs-16">Irene Hunter</a>
+											<p class="text-muted mb-0">Photography</p>
+										</div>
+									</div>
+									<div class="mt-2 footerimg-r ms-auto">
+										<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Likes"><span class="badge bg-primary-light text-primary"><i class="fe fe-heart"></i> 36</span></a>
+									</div>
+								</div>
+							</li>
+							<li class="item2">
+								<div class="d-flex mt-0 mb-0">
+									<div class="d-flex footerimg-l mb-0">
+										<img src="../assets/images/users/female/21.jpg" alt="image" class="avatar avatar-lg brround  me-2">
+										<div class="my-auto">
+											<a href="javascript:void(0)" class="text-dark font-weight-bold fs-16">Barbra Flegle </a>
+											<p class="text-muted mb-0">App Developer</p>
+										</div>
+									</div>
+									<div class="mt-2 footerimg-r ms-auto">
+										<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Likes"><span class="badge bg-primary-light text-primary"><i class="fe fe-heart"></i> 36</span></a>
+									</div>
+								</div>
+							</li>
+							<li class="item2">
+								<div class="d-flex mt-0 mb-0">
+									<div class="d-flex footerimg-l mb-0">
+										<img src="../assets/images/users/female/18.jpg" alt="image" class="avatar avatar-lg brround  me-2">
+										<div class="my-auto">
+											<a href="javascript:void(0)" class="text-dark font-weight-bold fs-16">Jacobin</a>
+											<p class="text-muted mb-0">Web-Design</p>
+										</div>
+									</div>
+									<div class="mt-2 footerimg-r ms-auto">
+										<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Likes"><span class="badge bg-primary-light text-primary"><i class="fe fe-heart"></i> 36</span></a>
+									</div>
+								</div>
+							</li>
+							<li class="item2" style="display: none;">
+								<div class="d-flex mt-0 mb-0">
+									<div class="d-flex footerimg-l mb-0">
+										<img src="../assets/images/users/female/10.jpg" alt="image" class="avatar avatar-lg brround  me-2">
+										<div class="my-auto">
+											<a href="javascript:void(0)" class="text-dark font-weight-bold fs-16">Julia Hardacre</a>
+											<p class="text-muted mb-0">WebDevelopment</p>
+										</div>
+									</div>
+									<div class="mt-2 footerimg-r ms-auto">
+										<a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Likes"><span class="badge bg-primary-light text-primary"><i class="fe fe-heart"></i> 36</span></a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--/Right Side Content-->
+		</div>
+	</div>
+</section><!--/Section-->
+<!--Section-->
+
+<script>
+
+	//$('[data-bs-toggle="tab"]').click(function (e) {
+	//	console.log($(e.target)[0].innerText);
+	//	if ($(e.target)[0].innerText != "Genel") {
+	//		$("#tab-1").removeClass('active');
+	//		$("#partialLoad").addClass('active');
+	//	}
+	//	else {
+	//		$("#partialLoad").removeClass('active');
+	//		$("#tab-1").addClass('active');
+	//	}
+	//});
+
+
+	function getPartialView(view) {
+		var link = '@Url.Action("LoadPartial","Courses")';
+
+		$.get(link + "?view=" + view, function (data) {
+
+			$('#partialLoad').html(data);
+		});
+
+	}
+
+
+
+
+</script>

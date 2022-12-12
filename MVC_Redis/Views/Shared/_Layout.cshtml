@@ -149,13 +149,18 @@
             </div><!--/Horizontal-main -->
             <!--Section-->
             
-            @if (@Html.ViewContext.ActionDescriptor.RouteValues["controller"].ToString() != "Search")
+            @if (@Html.ViewContext.ActionDescriptor.RouteValues["controller"].ToString() == "Search")
             {
-                Html.RenderPartial("_OtherBannerPartialView");
+                
+                Html.RenderPartial("_SearchBannerPartialView");
+            }
+            else if (@Html.ViewContext.ActionDescriptor.RouteValues["controller"].ToString() == "Courses")
+            {
+                Html.RenderPartial("_CoursesDetailsPartialView");
             }
             else
             {
-                Html.RenderPartial("_SearchBannerPartialView");
+                Html.RenderPartial("_OtherBannerPartialView");
             }
         </div>
     </div>

@@ -1,0 +1,456 @@
+﻿@{
+    ViewData["Title"] = "Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="sptb my-dash-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-12 col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Profilim</h3>
+                    </div>
+                    <div class="card-body text-center item-user border-bottom-0">
+                        <div class="profile-pic">
+                            <div class="profile-pic-img">
+                                <span class="bg-success dots" data-bs-toggle="tooltip" data-bs-placement="top" title="online"></span>
+                                <img src="../assets/images/users/female/20.jpg" class="brround" alt="user">
+                            </div>
+                            <a href="userprofile.html" class="text-dark">
+                                <h4 class="mt-3 mb-0 font-weight-semibold">Jacob Smith</h4>
+                            </a>
+                            <p class="mb-0 mt-1 text-muted">UI/UX Designer</p>
+                            <div class="wideget-user-info my-dash-1">
+                                <div class="wideget-user-icons mt-2">
+                                    <a href="javascript:void(0)" class="mt-0"><i class="fa fa-facebook"></i></a>
+                                    <a href="javascript:void(0)" class=""><i class="fa fa-twitter"></i></a>
+                                    <a href="javascript:void(0)" class=""><i class="fa fa-google"></i></a>
+                                    <a href="javascript:void(0)" class=""><i class="fa fa-dribbble"></i></a>
+                                    <a href="javascript:void(0)" class=""><i class="fa fa-share"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <aside class="app-sidebar doc-sidebar my-dash">
+                        <div class="app-sidebar__user clearfix">
+                            <ul class="side-menu">
+                                <li>
+                                    <a class="side-menu__item" href="javascript:void(0)" onclick="getPartialView('MyCoursesPartialView')"><i class="side-menu__icon fe fe-layers"></i><span class="side-menu__label">Kurslarım</span></a>
+                                </li>
+                                <li>
+                                    <a class="side-menu__item" href="javascript:void(0)" onclick="getPartialView('EditProfilePartialView')"><i class="side-menu__icon fe fe-edit"></i><span class="side-menu__label">Profilimi Düzenle</span></a>
+                                </li>
+
+                                <li>
+                                    <a class="side-menu__item" href="javascript:void(0)" onclick="getPartialView('MyFavoriteCoursesPartialView')"><i class="side-menu__icon fe fe-heart"></i><span class="side-menu__label">Favorilerim</span></a>
+                                </li>
+                                @*<li class="slide">
+                                <a class="side-menu__item slide-show" href="javascript:void(0)"><i class="side-menu__icon fe fe-folder"></i><span class="side-menu__label">Managed Courses</span><i class="angle fa fa-angle-right"></i></a>
+                                <ul class="slide-menu">
+                                <li><a class="slide-item" href="manged.html"><i class="fa fa-angle-right me-2"></i> Managed Courses</a></li>
+                                <li class="sub-slide">
+                                <a class="side-menu__item border-top-0 slide-item sub-slide-show" href="javascript:void(0)"><span class="side-menu__label"><i class="fa fa-angle-right me-2"></i> Managed </span> <i class="sub-angle fa fa-angle-right"></i></a>
+                                <ul class="child-sub-menu ">
+                                <li><a class="slide-item" href="javascript:void(0)"><i class="fa fa-angle-right me-2"></i> Managed Courses 01</a></li>
+                                <li><a class="slide-item" href="javascript:void(0)"><i class="fa fa-angle-right me-2"></i> Managed Courses 02</a></li>
+                                </ul>
+                                </li>
+                                </ul>
+                                </li>*@
+                                <li>
+                                    <a class="side-menu__item" href="javascript:void(0)" onclick="getPartialView('PaymentMethodsPartialView')"><i class="side-menu__icon fe fe-credit-card"></i><span class="side-menu__label">Ödeme Yöntemleri</span></a>
+                                </li>
+                                <li>
+                                    <a class="side-menu__item" href="javascript:void(0)" onclick="getPartialView('MyOrderListPartialView')"><i class="side-menu__icon fe fe-shopping-bag"></i><span class="side-menu__label">Siparişlerim</span></a>
+                                </li>
+                                <li>
+                                    <a class="side-menu__item" href="javascript:void(0)" onclick="getPartialView('SettingsPartialView')"><i class="side-menu__icon fe fe-settings"></i><span class="side-menu__label">Ayarlar </span></a>
+                                </li>
+                                <li>
+                                    <a class="side-menu__item" href="login.html"><i class="side-menu__icon fe fe-power"></i><span class="side-menu__label">Çıkış</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+                <div class="card my-select">
+                    <div class="card-header">
+                        <h3 class="card-title">Kurs Ara</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="text" placeholder="Ne Aramak İstiyorsun?">
+                        </div>
+                        <div class="form-group">
+                            <select name="country" id="select-countries" class="form-control form-select select2-show-search">
+                                <option value="1" selected="">All Categories</option>
+                                <option value="2">Web Security</option>
+                                <option value="3">Offline</option>
+                                <option value="4">Business</option>
+                                <option value="5">Online</option>
+                                <option value="6">Data Science</option>
+                                <option value="7">Driving</option>
+                                <option value="8">Education</option>
+                                <option value="9">Electronics</option>
+                                <option value="10">Pets &amp; Offline</option>
+                                <option value="11">Computer</option>
+                                <option value="12">Mobile</option>
+                                <option value="13">Events</option>
+                                <option value="14">Python</option>
+                                <option value="15">Security Hacking</option>
+                            </select>
+                        </div>
+                        <div class="">
+                            <a href="javascript:void(0)" class="btn  btn-primary">Ara</a>
+                        </div>
+                    </div>
+                </div>
+                @*<div class="card mb-xl-0">
+                <div class="card-header">
+                <h3 class="card-title">Safety Tips For Buyers</h3>
+                </div>
+                <div class="card-body">
+                <ul class="list-unstyled widget-spec  mb-0">
+                <li class="">
+                <i class="fa fa-plus-circle text-success" aria-hidden="true"></i> Meet Seller at public Place
+                </li>
+                <li class="">
+                <i class="fa fa-plus-circle text-success" aria-hidden="true"></i> Check item before you buy
+                </li>
+                <li class="">
+                <i class="fa fa-plus-circle text-success" aria-hidden="true"></i> Pay only after collecting item
+                </li>
+                <li class="ms-5 mb-0 mt-3">
+                <a href="javascript:void(0)" class="text-primary"> View more..</a>
+                </li>
+                </ul>
+                </div>
+                </div>*@
+            </div>
+            <div class="col-xl-9 col-lg-12 col-md-12" id="partialLoad">
+                <div class="app-content  my-3 my-md-5">
+                    <div class="side-app">
+                        <div class="row item-all-cat">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="item-all-card bg-primary">
+                                    <a href="javascript:void(0)"></a>
+                                    <h5 class="text-white">Satın Alınan Kurs</h5>
+                                    <div class="d-flex">
+                                        <div class="iteam-all-icon">
+                                            <i><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none" /></g><g><g><path d="M16.23,7h2.6c-0.06-0.47-0.36-0.94-0.79-1.17L10.5,2L2.8,5.83C2.32,6.09,2,6.64,2,7.17V15c0,1.1,0.9,2,2,2V7.4L10.5,4 L16.23,7z" /><path d="M20,8H7c-1.1,0-2,0.9-2,2v9c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2v-9C22,8.9,21.1,8,20,8z M20,19H7v-7l6.5,3.33L20,12V19z M13.5,13.33L7,10h13L13.5,13.33z" /></g></g></svg></i>
+                                        </div>
+                                        <div class="item-all-text ms-auto">
+                                            <h1 class="mb-0 counter font-weight-bold text-white">245</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="item-all-card bg-secondary">
+                                    <a href="javascript:void(0)"></a>
+                                    <h5 class="text-white"> Tamamlanan Kurs</h5>
+                                    <div class="d-flex">
+                                        <div class="iteam-all-icon">
+                                            <i class="ion-arrow-down-a" style="color:black;font-size: 24px;"></i>
+                                        </div>
+                                        <div class="item-all-text ms-auto">
+                                            <h1 class="mb-0 counter font-weight-bold text-white">3,892</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="item-all-card bg-success">
+                                    <a href="javascript:void(0)"></a>
+                                    <h5 class="text-white">Yapılan Yorum</h5>
+                                    <div class="d-flex">
+                                        <div class="iteam-all-icon">
+                                            <i><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM20 4v13.17L18.83 16H4V4h16zM6 12h12v2H6zm0-3h12v2H6zm0-3h12v2H6z" /></svg></i>
+                                        </div>
+                                        <div class="item-all-text ms-auto">
+                                            <h1 class="mb-0 counter font-weight-bold text-white">763</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="item-all-card bg-warning">
+                                    <a href="javascript:void(0)"></a>
+                                    <h6 class="text-white">Takip Edilen Eğitmen</h6>
+                                    <div class="d-flex">
+                                        <div class="iteam-all-icon">
+                                            <i><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" /></svg></i>
+                                        </div>
+                                        <div class="item-all-text ms-auto">
+                                            <h1 class="mb-0 counter font-weight-bold text-white">5,925</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-deck">
+                    <div class="col-xl-4 col-lg-6 col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Puan Verilen Eğitmenler</h4>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="media mb-0 mt-2 border-bottom align-items-center p-3">
+                                    <img src="../assets/images/users/female/8.jpg" alt="" class="me-3 rounded-circle">
+                                    <div class="media-body">
+                                        <div class="time-activity mb-0">
+                                            <div class="item-activity">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex align-items-center">
+                                                        <p class="mb-0 h6"><b>Julia Hardacre</b></p>
+                                                    </div>
+                                                    <div class="star-ratings start-ratings-main clearfix">
+                                                        <div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
+                                                            <div class="br-wrapper br-theme-fontawesome-stars">
+                                                                <select class="example-fontawesome" name="rating" autocomplete="off" style="display: none;">
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="5" selected="">5</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex align-items-center">
+                                                        <p class="mb-0">Web Designer</p>
+                                                    </div>
+                                                    <small class="mb-0 ms-auto fs-12"><b>5 reviews</b></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="media mb-0 mt-2 border-bottom align-items-center p-3">
+                                    <img src="../assets/images/users/male/8.jpg" alt="" class="me-3 rounded-circle">
+                                    <div class="media-body">
+                                        <div class="time-activity mb-0">
+                                            <div class="item-activity">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex align-items-center">
+                                                        <p class="mb-0 h6"><b>Thomos</b></p>
+                                                    </div>
+                                                    <div class="star-ratings start-ratings-main clearfix">
+                                                        <div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
+                                                            <div class="br-wrapper br-theme-fontawesome-stars">
+                                                                <select class="example-fontawesome" name="rating" autocomplete="off" style="display: none;">
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4" selected="">4</option>
+                                                                    <option value="5">5</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex align-items-center">
+                                                        <p class="mb-0">App Developer</p>
+                                                    </div>
+                                                    <small class="mb-0 ms-auto fs-12"><b>4 reviews</b></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="media mb-0 mt-2 border-bottom align-items-center p-3">
+                                    <img src="../assets/images/users/female/12.jpg" alt="" class="me-3 rounded-circle">
+                                    <div class="media-body">
+                                        <div class="time-activity mb-0">
+                                            <div class="item-activity">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex align-items-center">
+                                                        <p class="mb-0 h6"><b>Marry cott</b></p>
+                                                    </div>
+                                                    <div class="star-ratings start-ratings-main clearfix">
+                                                        <div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
+                                                            <div class="br-wrapper br-theme-fontawesome-stars">
+                                                                <select class="example-fontawesome" name="rating" autocomplete="off" style="display: none;">
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4" selected="">4</option>
+                                                                    <option value="5">5</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex align-items-center">
+                                                        <p class="mb-0">Java Developer</p>
+                                                    </div>
+                                                    <small class="mb-0 ms-auto fs-12"><b>4 reviews</b></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="media mb-0 mt-2 border-bottom align-items-center p-3">
+                                    <img src="../assets/images/users/male/15.jpg" alt="" class="me-3 rounded-circle">
+                                    <div class="media-body">
+                                        <div class="time-activity mb-0">
+                                            <div class="item-activity">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex align-items-center">
+                                                        <p class="mb-0 h6"><b>John Joya</b></p>
+                                                    </div>
+                                                    <div class="star-ratings start-ratings-main clearfix">
+                                                        <div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
+                                                            <div class="br-wrapper br-theme-fontawesome-stars">
+                                                                <select class="example-fontawesome" name="rating" autocomplete="off" style="display: none;">
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4" selected="">4</option>
+                                                                    <option value="5">5</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex align-items-center">
+                                                        <p class="mb-0">3D Animation Trainer</p>
+                                                    </div>
+                                                    <small class="mb-0 ms-auto fs-12"><b>4 reviews</b></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="media mb-0 mt-2 align-items-center p-3">
+                                    <img src="../assets/images/users/female/15.jpg" alt="" class="me-3 rounded-circle">
+                                    <div class="media-body">
+                                        <div class="time-activity mb-0">
+                                            <div class="item-activity">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex align-items-center">
+                                                        <p class="mb-0 h6"><b>Katrine</b></p>
+                                                    </div>
+                                                    <div class="star-ratings start-ratings-main clearfix">
+                                                        <div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
+                                                            <div class="br-wrapper br-theme-fontawesome-stars">
+                                                                <select class="example-fontawesome" name="rating" autocomplete="off" style="display: none;">
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3" selected="">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="5">5</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="d-flex align-items-center">
+                                                        <p class="mb-0">Beautician</p>
+                                                    </div>
+                                                    <small class="mb-0 ms-auto fs-12"><b>3 reviews</b></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer z-index-10 text-white">
+                                <a href="javascript:void(0)" class="btn btn-primary">Daha Fazlasını Göster</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Kurs Aktivite</h3>
+                            </div>
+                            <div class="card-body">
+                                <div id="browser" class=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-12 col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Son Yapılan Yorumlar</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="new-posts">
+                                    <div class="new-postsinfo">
+                                        <div class="new-postsdata d-flex align-items-center mt-auto">
+                                            <h6 class="text-danger font-weight-semibold text-uppercase mb-0">Latest Courses</h6>
+                                            <a href="javascript:void(0)" class="ms-auto  text-muted"> 10 days ago </a>
+                                        </div>
+                                        <div class="new-postsdata border-bottom">
+                                            <h4 class="mt-3 font-weight-semibold ">3D Animation Trainig</h4>
+                                            <p class="text-muted">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit sed quia non numquam eius modi tempora qui dolorem ipsum quia dolor sit amet.</p>
+                                        </div>
+                                    </div>
+                                    <div class="new-postsinfo">
+                                        <div class="new-postsdata d-flex align-items-center mt-4">
+                                            <h6 class="text-danger font-weight-semibold text-uppercase mb-0">Latest Courses</h6>
+                                            <a href="javascript:void(0)" class="ms-auto  text-muted"> 7 hours </a>
+                                        </div>
+                                        <div class="new-postsdata">
+                                            <h4 class="mt-3 font-weight-semibold ">Free Literature Classes</h4>
+                                            <p class="text-muted mb-0">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit sed quia non numquam eius modi tempora qui dolorem ipsum quia dolor sit amet.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer z-index-10 text-white">
+                                <a href="javascript:void(0)" class="btn btn-primary">Daha Fazlasını Göster</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--/User Dashboard-->
+<script src="~/assets/plugins/echarts/echarts.js"></script>
+<script src="~/assets/js/apexcharts.js"></script>
+<script src="~/assets/js/index4.js"></script>
+
+<script>
+      $(".side-menu").on('click', 'a', function () {
+        // remove classname 'active' from all li who already has classname 'active'
+        $(".side-menu__item.active").removeClass("active");
+        // adding classname 'active' to current click li 
+    $(this).addClass("active"); 
+});
+
+
+    function getPartialView(view) {
+        var link = '@Url.Action("LoadPartial","Student")';
+
+        $.get(link + "?view=" + view, function (data) {
+            $('#partialLoad').html('');
+            $('#partialLoad').html(data);
+        });
+
+    }
+
+    $('[data-bs-toggle="tab"]').click(function (e) {
+        console.log($(e.target)[0].innerText);
+       
+            
+           
+        
+        
+    });
+
+</script>

@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewData["Title"] = "Invoice";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Invoice-->
+<section class="sptb">
+	<div class="container">
+		<div class="card mb-0">
+			<div class="card-header">
+				<h3 class="card-title">#INV-287</h3>
+				<div class="card-options">
+					<button type="button" class="btn btn-sm btn-success me-2"><i class="icon icon-wallet"></i> Ödeme</button>
+				</div>
+			</div>
+			<div class="card-body">
+				<div class="row ">
+					<div class="col-lg-6 ">
+						<p class="h3">Client Inc</p>
+						<address>
+							Street Coursedress<br>
+							State, City<br>
+							Region, Postal Code<br>
+							ltd@example.com
+						</address>
+					</div>
+					<div class="col-lg-6 text-end">
+						<p class="h3">Invoice To</p>
+						<address>
+							Street Coursedress<br>
+							State, City<br>
+							Region, Postal Code<br>
+							ctr@example.com
+						</address>
+					</div>
+				</div>
+				<div class=" text-dark">
+					<p class="mb-1 mt-5"><span class="font-weight-semibold">Invoice Date :</span> 1st April 2021</p>
+					<p><span class="font-weight-semibold">Due Date :</span> 15th April 2021</p>
+				</div>
+				<div class="table-responsive push">
+					<table class="table table-bordered table-hover text-nowrap">
+						<tr>
+							<th class="font-weight-bold text-center ">s.no</th>
+							<th class="font-weight-bold text-center">Item</th>
+							<th class="font-weight-bold">Item Lists</th>
+							<th class="text-center font-weight-bold">Quantity</th>
+							<th class="text-end font-weight-bold">Price</th>
+						</tr>
+						<tr>
+							<td class="text-center">1</td>
+							<td class="text-center">
+								<i class="fe fe-code bg-primary text-white fs-23 p-3 br-7"></i>
+							</td>
+							<td>
+								<p class="font-weight-semibold mb-1 fs-18">Python</p>
+								<div class="text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui </div>
+							</td>
+							<td class="text-center">1</td>
+							<td class="text-end">$1,800.00</td>
+						</tr>
+						<tr>
+							<td class="text-center">2</td>
+							<td class="text-center">
+								<i class="fe fe-codepen bg-primary text-white fs-23 p-3 br-7"></i>
+							</td>
+							<td>
+								<p class="font-weight-semibold mb-1 fs-18">Unix</p>
+								<div class="text-muted">blanditiis praesentium voluptatum deleniti atque corrupti quos dolores </div>
+							</td>
+							<td class="text-center">1</td>
+							<td class="text-end">$20,000.00</td>
+						</tr>
+						<tr>
+							<td class="text-center">3</td>
+							<td class="text-center">
+								<i class="fe fe-globe bg-primary text-white fs-23 p-3 br-7"></i>
+							</td>
+							<td>
+								<p class="font-weight-semibold mb-1 fs-18">Networking</p>
+								<div class="text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui</div>
+							</td>
+							<td class="text-center">1</td>
+							<td class="text-end">$3,200.00</td>
+						</tr>
+						<tr>
+							<td colspan="4" class="font-weight-semibold text-end">Subtotal</td>
+							<td class="text-end">$25,000.00</td>
+						</tr>
+						<tr>
+							<td colspan="4" class="font-weight-semibold text-end">Vat Rate</td>
+							<td class="text-end">20%</td>
+						</tr>
+						<tr>
+							<td colspan="4" class="font-weight-semibold text-end">Vat Due</td>
+							<td class="text-end">$5,000.00</td>
+						</tr>
+						<tr>
+							<td colspan="4" class="font-weight-semibold text-uppercase text-end">Total Due</td>
+							<td class="font-weight-semibold text-end">$30,000.00</td>
+						</tr>
+						<tr>
+							<td colspan="5" class="text-end">
+								<button type="button" class="btn btn-secondary"><i class="icon icon-wallet"></i> Pay Invoice</button>
+								<button type="button" class="btn btn-primary" onClick="javascript:window.print();"><i class="icon icon-paper-plane"></i> Send Invoice</button>
+								<button type="button" class="btn btn-info" onClick="javascript:window.print();"><i class="icon icon-printer"></i> Print Invoice</button>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<p class="text-muted text-center mt-5">Thank you very much for doing business with us. We look forward to working with you again!</p>
+			</div>
+		</div>
+	</div>
+</section><!--/Invoice-->
+<!--Section-->
