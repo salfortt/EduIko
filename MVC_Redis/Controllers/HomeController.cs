@@ -18,7 +18,7 @@ namespace MVC_Redis.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult About()
         {
             return View();
         }
