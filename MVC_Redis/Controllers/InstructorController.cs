@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Entities.Dto.AccountModel;
+using Entities.Dto.ProfileModel;
+using Microsoft.AspNetCore.Mvc;
 
 namespace MVC_Redis.Controllers
 {
@@ -13,6 +15,15 @@ namespace MVC_Redis.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+		public IActionResult Profile(InstructorProfile  instructorProfile)
+		{
+            //Profile Kayıt
+
+			
+			return View();
+		}
 
 		public IActionResult Instructor()
 		{

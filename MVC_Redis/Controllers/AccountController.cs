@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MVC_Redis.Models.Account;
+﻿using Entities.Dto.AccountModel;
+using Microsoft.AspNetCore.Mvc;
 
 namespace MVC_Redis.Controllers
 {
-	public class AccountController : Controller
+    public class AccountController : Controller
 	{
 		public IActionResult Index()
 		{

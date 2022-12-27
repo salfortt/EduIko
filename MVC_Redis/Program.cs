@@ -3,7 +3,6 @@ using MVC_Redis;
 using MVC_Redis.Controllers;
 using StackExchange.Redis;
 using Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation;
-using MVC_Redis.Models.Account;
 
 
 var builder = WebApplication.CreateBuilder(args);
